@@ -23,14 +23,14 @@ version_prefix = f"/api/{version}"
 
 app = FastAPI(
     lifespan=create_db_and_tables,
-    title="AppTransactionFastAPI",
+    title="AppTransactionFastAPI Ariel",
     description=description,
     version=version,
     license_info={"name": "MIT License", "url": "https://opensource.org/license/mit"},
     contact={
-        "name": "Henry Alejandro Taby Zenteno",
-        "url": "https://github.com/henrytaby",
-        "email": "henry.taby@gmail.com",
+        "name": "Ariel Azarias Vargas Calvimontes",
+        "url": "https://github.com/arivarcal",
+        "email": "arivarcal@gmail.com",
     },
     openapi_tags=[
         {
@@ -39,11 +39,11 @@ app = FastAPI(
         },
         {
             "name": "Products",
-            "description": "Lista de Products",
+            "description": "Lista de Productos",
         },
         {
             "name": "Customers",
-            "description": "Lista de Customers",
+            "description": "Lista de Clientes",
         },
     ],
 )
