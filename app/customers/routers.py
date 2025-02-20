@@ -2,9 +2,9 @@
 from fastapi import APIRouter, status
 
 from app.db import SessionDep
-from app.customer.models import Customer
-from app.customer.schemas import CustomerCreate, CustomerUpdate
-from app.customer.service import CustomerService
+from app.customers.models import Customer
+from app.customers.schemas import CustomerCreate, CustomerUpdate
+from app.customers.service import CustomerService
 
 router = APIRouter()
 service = CustomerService()
@@ -38,7 +38,7 @@ async def update_customer(
     
     return service.update_customer(customer_id, customer_data, session)
 
-# GET ALL CUSTOMER - Obtener todas las tareas
+# GET ALL TASK - Obtener todas las tareas
 # ----------------------
 @router.get("/", response_model=list[Customer])
 async def get_customers(
